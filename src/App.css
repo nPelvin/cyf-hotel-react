@@ -55,3 +55,42 @@ tr {
 .card {
   width: 18rem;
 }
+
+.cardWrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.manchester,
+.london,
+.glasgow {
+  max-width: 30%;
+  text-align: center;
+  padding: 10px;
+}
+
+.manchester img,
+.london img,
+.glasgow img {
+  height: 200px;
+  max-width: 100%;
+}
+
+footer {
+  background-color: black;
+}
+
+@media (max-width: 640px) {
+  .cardWrapper {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .manchester,
+  .london,
+  .glasgow {
+    max-width: 90%;
+  }
+}
