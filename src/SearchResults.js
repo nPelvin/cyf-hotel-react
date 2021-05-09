@@ -1,23 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import Guest from "./Guest";
 import moment, { diff } from "moment";
 moment().format();
 
 function SearchResults(prop) {
-  // console.log(prop.results[1].id);
-
-  const tableData = prop.results.map(x => (
-    <tr>
-      <th scope="row">{x.id}</th>
-      <td>{x.title}</td>
-      <td>{x.firstName}</td>
-      <td>{x.surname}</td>
-      <td>{x.email}</td>
-      <td>{x.roomID}</td>
-      <td>{x.checkInDate}</td>
-      <td>{x.checkOutDate}</td>
-      <td>{moment(x.checkOutDate).diff(moment(x.checkInDate), "days")}</td>
-    </tr>
-  ));
+  const rows = prop.results;
   return (
     <table class="table">
       <thead>
@@ -33,7 +20,11 @@ function SearchResults(prop) {
           <th scope="col">Nights Staying</th>
         </tr>
       </thead>
-      <tbody>{tableData}</tbody>
+      <tbody>
+        {prop.results.map(guest => (
+          <Guest guest={guest} />
+        ))}
+      </tbody>
     </table>
   );
 }

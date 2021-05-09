@@ -94,3 +94,11 @@ footer {
     max-width: 90%;
   }
 }
+
+.highlighted {
+  background-color: crimson;
+}
+
+.not_highlighted {
+  background-color: white;
+}
