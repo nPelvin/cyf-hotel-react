@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Guest from "./Guest";
-import moment, { diff } from "moment";
+import moment from "moment";
 moment().format();
 
 function SearchResults(prop) {
-  const rows = prop.results;
   return (
     <table class="table">
       <thead>

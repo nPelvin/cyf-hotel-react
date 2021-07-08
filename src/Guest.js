@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import moment, { diff } from "moment";
+import moment from "moment";
 import CustomerProfile from "./CustomerProfile";
 
 const Guest = x => {
